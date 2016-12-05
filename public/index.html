@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="stylesheets/style.css">
 <script type="text/javascript">
 function insertText () {
-	document.getElementById('firstNameDisplay').innerHTML = document.getElementById('firstName').innerText;
-    document.getElementById('lastNameDisplay').innerHTML = document.getElementById('lastName').innerText;
+    document.getElementById("firstNameDisplay").innerHTML = document.getElementById("firstName").value;
+    document.getElementById("lastNameDisplay").innerHTML = document.getElementById("lastName").value;
 }
 </script>
 </head>
@@ -28,12 +28,10 @@ function insertText () {
 		</tr>
 		<tr>
 			<td>
-				<h1 id="TestHeading">
-					Hi <span id="firstNameDisplay">Unknown</span> <span id="lastNameDisplay"></span>
-				</h1>
+				Hi <span id="firstNameDisplay"></span> <span id="lastNameDisplay"></span>
 			</td>
-			<td>First name: <input type="text" name="firstName"><br>
-				Last name: <input type="text" name="lastName"><br>
+			<td>First name: <input type="text" name="firstName" id="firstName"><br>
+				Last name: <input type="text" name="lastName" id="lastName"><br>
 				<button onclick="insertText();">Submit</button>
 			</td>
 		</tr>
