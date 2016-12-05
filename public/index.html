@@ -31,7 +31,8 @@
 				<input name="submit" type="submit" value="Submit"> 
 				<script>
 					document.getElementById('submit').onchange = function() {
-    					document.getElementById('TestHeading').innerHTML = this.value;
+    					document.getElementById('a').innerHTML = document.getElementById('fname').innerText;
+    					document.getElementById('b').innerHTML = document.getElementById('lname').innerText;
 					};
 				</script>
 			</td>
