@@ -7,6 +7,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="stylesheets/style.css">
+<script type="text/javascript">
+function insertText () {
+	document.getElementById('firstNameDisplay').innerHTML = document.getElementById('firstName').innerText;
+    document.getElementById('lastNameDisplay').innerHTML = document.getElementById('lastName').innerText;
+}
+</script>
 </head>
 
 <body>
@@ -23,18 +29,12 @@
 		<tr>
 			<td>
 				<h1 id="TestHeading">
-					Hi <span id="a">Unknown</span> <span id="b"></span>
+					Hi <span id="firstNameDisplay">Unknown</span> <span id="lastNameDisplay"></span>
 				</h1>
 			</td>
-			<td>First name: <input type="text" name="fname"><br>
-				Last name: <input type="text" name="lname"><br>
-				<input name="submit" type="submit" value="Submit"> 
-				<script>
-					document.getElementById('submit').onchange = function() {
-    					document.getElementById('a').innerText = document.getElementById('fname').innerText;
-    					document.getElementById('b').innerText = document.getElementById('lname').innerText;
-					};
-				</script>
+			<td>First name: <input type="text" name="firstName"><br>
+				Last name: <input type="text" name="lastName"><br>
+				<button onclick="insertText();">Submit</button>
 			</td>
 		</tr>
 	</table>
